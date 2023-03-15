@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{margin:0;
+padding:0;
+box-sizing:border-box;}
+
 .App {
   text-align: center;
 }
@@ -14,14 +20,14 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color:white;
+  min-height:50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color:#34495e;
 }
 
 .App-link {
@@ -36,3 +42,78 @@
     transform: rotate(360deg);
   }
 }
+.container{
+  font-family: 'Poppins', sans-serif;
+}
+section{position:relative;
+height: 100vh;
+width:100%;
+display:flex;}
+
+section .imgBox{position:relative;
+  height: 100vh;
+  width:50%;
+  display:flex;
+}
+
+section .imgBox img{
+  position:absolute;
+  height:100%;
+  width:100%;
+  top:0;
+  left:0;
+  object-fit: cover;
+}
+
+.inpt {border-radius:10px;
+height:50%;
+width:50%;
+padding:10px 5px 10px 5px ;
+margin:10px;}
+
+h1{margin-top:50px;
+  margin-right:50%;
+color:black;
+}
+
+.input {border-radius:10px;
+  padding:5px 5px 5px 5px ;
+  margin-top:20px;
+  margin-right:50%;}
+  
+h1{
+font-family:'Poppins', sans-serif;
+}
+.container{height:100vh;
+width:50%;}
+
+.btn{background-color:#3498db;
+  cursor:pointer;
+  margin-right:50%;
+  margin-top:5%;
+  padding:5px 10px 5px 10px ;
+}
+p{margin-top:5%;
+  margin-right:80px;
+}
+.loginlink{position:fixed;
+right:100px;
+top:10px;
+text-decoration:none;
+color:white;}
+
+.signuplink{position:fixed;
+  right:10px;
+  top:10px;
+  text-decoration:none;
+  color:white;
+  }
+
+  .homepage{background-image:url("https://images.alphacoders.com/862/862638.jpg");
+background-size:cover;
+background-repeat: no-repeat;
+height:100vh;
+width:100%;
+background-color:rgba(0,0,0,0.6) ;
+
+}   
