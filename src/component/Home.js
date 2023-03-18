@@ -4,13 +4,11 @@ const Home = () =>{
   return(
         <>
         <div className="homepage">
-        <div className="loginlink"> 
-                  <NavLink to="/login">Login</NavLink>
-                  </div>
-                  <div className="signuplink">
-                  <NavLink to="signup"> Signup</NavLink>
-                  </div>
-        </div>
+          <h5 id="heading">Zomato</h5>
+                  <NavLink to="/login" id="loginlink">Login</NavLink> 
+                  <NavLink to="/signup" id="signuplink">Signup</NavLink>
+                  <NavLink to="/resturant" id="resturantlink"> Add resturant</NavLink>
+            </div>
         </>
     )
 

@@ -22,17 +22,17 @@ const setData = (e) =>{
     return(
         <>
         <section>
-            <div className="imgBox">
-                <img src="https://static.vecteezy.com/system/resources/previews/007/278/547/original/work-at-home-concept-illustration-freelance-man-working-on-computer-at-her-house-isolated-on-white-background-online-study-education-vector.jpg">
+            <div id="imgBox">
+                <img src="https://img.freepik.com/premium-vector/chef-man-cooking-restaurant-kitchen-vector-chef-guy-preparing-delicious-dish-character-cooker-wearing-professional-suit-hat-cook-delicacy-meal-food-kitchenware-flat-cartoon-illustration_87720-5448.jpg" >
                 </img>
             </div>
         <div className="container">
-       <b>  <h1> Sign in </h1> </b> 
+       <b>  <h1> <center> Sign in </center> </h1> </b> 
                 <form>
-            <input className="input" type="email" onChange={setData} value={inpval.name} placeholder="Email or contact" name="email" required /> 
+            <input className="input" type="email" onChange={setData} value={inpval.name} placeholder="Email" name="email" required /> 
            <br/> <input className="input" type="password" onChange={setData} value={inpval.password} placeholder="Password" name="password" required /> 
-           <br/> <button className="btn" > Log in </button>
-            <p>Don't have an account ? <a href="/signup">create an account</a></p>
+           <br/> <button type="submit" id="btn">Login</button>
+            <p>Don't have an account ? <a id="Register" href="/signup">Create an account</a></p>
         </form>
         </div>
         </section>
