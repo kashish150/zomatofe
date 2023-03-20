@@ -34,7 +34,7 @@ const setData = (e) =>{
             <input className="input" type="number" onChange={setData} value={inpval.contact} placeholder="Contact" name="contact" required />
             <input className="input"type="email" onChange={setData} value={inpval.email} placeholder="e-mail" name="email" required />
             <input className="input" type="password" onChange={setData} value={inpval.password} placeholder="Password" name="password" required /> 
-          <br/>   <button type="submit" id="btn">Register </button> 
+          <br/>   <button type="submit" id="btn"> <NavLink to="/search" id="redirect" >Register </NavLink> </button> 
             <p>Already have an account? <a href="/login"  id="Register">Log in</a></p>
         </form>
         </div>

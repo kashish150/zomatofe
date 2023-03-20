@@ -18,7 +18,6 @@ const setData = (e) =>{
         }
     })
         }
-
     return(
         <>
         <section>
@@ -31,7 +30,7 @@ const setData = (e) =>{
                 <form>
             <input className="input" type="email" onChange={setData} value={inpval.name} placeholder="Email" name="email" required /> 
            <br/> <input className="input" type="password" onChange={setData} value={inpval.password} placeholder="Password" name="password" required /> 
-           <br/> <button type="submit" id="btn">Login</button>
+           <br/> <button type="submit" id="btn"> <NavLink to="/search" id="redirect" >   Login </NavLink> </button>
             <p>Don't have an account ? <a id="Register" href="/signup">Create an account</a></p>
         </form>
         </div>

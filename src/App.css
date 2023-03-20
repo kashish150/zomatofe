@@ -68,15 +68,17 @@ box-sizing:border-box;}
     text-decoration:none;
   
   }
-  #heading{color:white;
+  #heading{color:black;
     position:fixed;
     right:100px;
-    margin-top:200px;
-    font-size:50px;
+    margin-top:150px;
+    font-size:60px;
    }
   
-  .homepage{background-color:#2c3e50;
-  height:100vh;
+  .homepage{background-image:url("https://t4.ftcdn.net/jpg/04/08/03/13/360_F_408031304_jtab5BftOyMd80Uc8GMJZ0eVg1ZXtc9S.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+      height:100vh;
   width:100%;
   color:white;
   display:flex;
@@ -110,7 +112,8 @@ section #imgBox img{
   left:0;
   object-fit: cover;
 }
-
+#redirect{color:white;
+text-decoration:none;}
 h1{margin-top:50px;
   letter-spacing: .5px;
   margin-right:50%;
