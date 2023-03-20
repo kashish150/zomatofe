@@ -18,12 +18,13 @@ const RestaurentLogin = () => {
     console.log("called");
     axios
       .get(
-        `http://localhost:3000/api/product/getAllProducts/${"64142a494d532e7558195d1c"}`
+        `http://localhost:3000/api/order/getRestaurentOrders/${"64142a494d532e7558195d1c"}`
       )
       .then((res) => {
         // setOrders(res.data);
         console.log("restaurent");
         console.log(res.data);
+        setOrders(res.data);
       });
   };
 
@@ -31,14 +32,24 @@ const RestaurentLogin = () => {
     <div>
       Restaurent DashBoard Order
       <div className="restaurentParent">
-        {
-          <Cards
-            title="DOMINOS"
-            author="ORDER_ID-#482498YEUWI"
-            price="6000"
-            img="https://content3.jdmagicbox.com/comp/mumbai/68/022pgl02068/catalogue/image-restaurant-and-bar-goregaon-west-mumbai-home-delivery-restaurants-ihb12.jpg"
-          />
-        }
+        {orders.length > 0 ? (
+          <div>
+            <table>
+              {orders.map((order, index) => {
+                return (
+                  <tr key={index}>
+                    <td>{order._id}</td>
+                    <td>{order.restaurent}</td>
+                    <td>{order.product}</td>
+                    <td>{order.status}</td>
+                  </tr>
+                );
+              })}
+            </table>
+          </div>
+        ) : (
+          <div> Empty </div>
+        )}
       </div>
     </div>
   );

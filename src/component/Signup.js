@@ -29,10 +29,10 @@ const Signup = () => {
           <img src="https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg?w=2000"></img>
         </div>
         <div className="container">
-          <h1> Sign up </h1>
+          <h2> Sign up </h2>
           <form>
             <input
-              className="inpt"
+              className="input"
               type="text"
               onChange={setData}
               value={inpval.name}
@@ -41,7 +41,7 @@ const Signup = () => {
               required
             />
             <input
-              className="inpt"
+              className="input"
               type="number"
               onChange={setData}
               value={inpval.contact}
@@ -50,7 +50,7 @@ const Signup = () => {
               required
             />
             <input
-              className="inpt"
+              className="input"
               type="email"
               onChange={setData}
               value={inpval.email}
@@ -59,7 +59,7 @@ const Signup = () => {
               required
             />
             <input
-              className="inpt"
+              className="input"
               type="password"
               onChange={setData}
               value={inpval.password}
@@ -67,9 +67,15 @@ const Signup = () => {
               name="password"
               required
             />
-            <br /> <button className="btn">Register </button>
-            <p className="para">
-              Already have an account? <a href="/login">Log in</a>
+            <br />{" "}
+            <button type="submit" id="btn">
+              Register{" "}
+            </button>
+            <p>
+              Already have an account?{" "}
+              <a href="/login" id="Register">
+                Log in
+              </a>
             </p>
           </form>
         </div>

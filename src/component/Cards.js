@@ -1,51 +1,28 @@
 import React from "react";
-import "./Cards.css";
-
-const Cards = ({ title, author, price, img }) => {
-  const products = [
-    {
-      productId: "74872352",
-      produtName: "PIZZA",
-      productPrice: 250,
-      productQuantity: 5,
-      productImage: "",
-    },
-  ];
-  console.log(products.length);
-  //   const { title, author, price, img } = item;
+import card from "react-bootstrap/card";
+const Cards = ({ data }) => {
   return (
-    <div className="cards">
-      <div className="image_box">
-        <img src={img} alt="Image" />
-      </div>
-      <div className="details">
-        <p>{title}</p>
-        <p>{author}</p>
-        <div>
-          {products.length > 0 ? (
-            <div>
-              <div>
-                {products.map((product) => {
-                  return (
-                    <div className="productDetails">
-                      <div>{product.produtName}</div> &nbsp; =
-                      <div>{product.productPrice}</div> &nbsp; X &nbsp;
-                      <div>{product.productQuantity}</div> &nbsp;=
-                      <div>
-                        {product.productPrice * product.productQuantity}
-                      </div>
-                    </div>
-                  );
-                })}
+    <>
+      {data.map((element, k) => {
+        return (
+          <>
+            <card style={{ width: "22rem", border: "none" }} className="mb-4">
+              <card.Img variant="top" className="cd" src={element.imgdata} />
+              <div className="card_body">
+                <div className="Upper_data ">
+                  <h4 className="mt-2">{element.rname}</h4>
+                  <span>{element.rating}&nbsp;★ </span>
+                </div>
+                <div className="lower-data">
+                  <h5>{element.speciality}</h5>
+                  <span>{element.price}</span>
+                </div>
               </div>
-              <p>Total Price - {price}Rs</p>
-            </div>
-          ) : (
-            <div>Empty products</div>
-          )}
-        </div>
-      </div>
-    </div>
+            </card>
+          </>
+        );
+      })}
+    </>
   );
 };
 
