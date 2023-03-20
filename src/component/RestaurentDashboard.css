@@ -1,0 +1,12 @@
+.restaurentParent{
+    width: 100%;
+}
+.Restuarentcard{
+    font-size: 20px;
+    border:1px solid black;
+    width: 100%;
+    display: flex;
+}
+.Restuarentcard img {
+    height: 100%;
+}

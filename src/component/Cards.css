@@ -1,0 +1,24 @@
+.cards{
+    width: 100%;
+    height: 100%;
+    border:1px solid black;
+    display: flex;
+}
+.cards img {
+    left : 0;
+    width: 30%;
+    height: 100%;
+}
+.restaurentParent{
+    width: 100%;
+    height: 20%;
+}
+.image_box{
+    display: flex;
+}
+.details{
+    font-size: 15px;
+}
+.productDetails{
+    display: flex;
+}
