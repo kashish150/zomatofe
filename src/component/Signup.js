@@ -69,7 +69,10 @@ const Signup = () => {
             />
             <br />{" "}
             <button type="submit" id="btn">
-              Register{" "}
+              {" "}
+              <NavLink to="/search" id="redirect">
+                Register{" "}
+              </NavLink>{" "}
             </button>
             <p>
               Already have an account?{" "}

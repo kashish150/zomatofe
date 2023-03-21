@@ -18,7 +18,6 @@ const Login = () => {
       };
     });
   };
-
   return (
     <>
       <section>
@@ -55,7 +54,11 @@ const Login = () => {
             />
             <br />{" "}
             <button type="submit" id="btn">
-              Login
+              {" "}
+              <NavLink to="/search" id="redirect">
+                {" "}
+                Login{" "}
+              </NavLink>{" "}
             </button>
             <p>
               Don't have an account ?{" "}

@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "./RestaurentDashboard.css";
 import Cards from "./Cards";
+import Dropdown from "./Dropdown";
+
 const RestaurentLogin = () => {
   //for getting value that what user put we have to use hook!!
 
@@ -34,18 +36,22 @@ const RestaurentLogin = () => {
       <div className="restaurentParent">
         {orders.length > 0 ? (
           <div>
-            <table>
-              {orders.map((order, index) => {
-                return (
-                  <tr key={index}>
-                    <td>{order._id}</td>
-                    <td>{order.restaurent}</td>
-                    <td>{order.product}</td>
-                    <td>{order.status}</td>
-                  </tr>
-                );
-              })}
-            </table>
+            {/* <table> */}
+            {orders.map((order, index) => {
+              return (
+                <div>
+                  <Dropdown status={order.status} />
+                </div>
+                // <tr key={index}>
+                //   {/* <td>{order._id}</td>
+                //   <td>{order.restaurent}</td>
+                //   <td>{order.product}</td>
+                //   <td>{order.status}</td> */}
+                //   <Dropdown status={order.status} />
+                // </tr>
+              );
+            })}
+            {/* </table> */}
           </div>
         ) : (
           <div> Empty </div>
