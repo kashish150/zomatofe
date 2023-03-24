@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-const Login = () => {
+const Login = (props) => {
   //for getting value that what user put we have to use hook!!
   const [inpval, setinp] = useState({
     email: "",
@@ -29,7 +29,7 @@ const Login = () => {
             {" "}
             <h1>
               {" "}
-              <center> Sign in </center>{" "}
+              <center> Sign in {props.value} </center>{" "}
             </h1>{" "}
           </b>
           <form>
@@ -56,9 +56,8 @@ const Login = () => {
             <button type="submit" id="btn">
               {" "}
               <NavLink to="/search" id="redirect">
-                {" "}
-                Login{" "}
-              </NavLink>{" "}
+                Login
+              </NavLink>
             </button>
             <p>
               Don't have an account ?{" "}
