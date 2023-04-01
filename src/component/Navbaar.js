@@ -1,28 +1,18 @@
-import React from "react";
-
-const Navbaar = () => {
+import React from 'react'
+import { NavLink } from 'react-router-dom';
+const Navbaar = (props) => {
   return (
-    <div>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/login">
-                  Login
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/signup">
-                  Signup
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+    <div className='navbaar'>
+     <div className="items">
+     <NavLink to="/" id="homelink" className='links'> Home </NavLink>  
+     <NavLink to="/login" id="productlink" className='links'>Login</NavLink>  
+     <NavLink to="/signup" id="editlink" className='links'> SignUp </NavLink>
+     <NavLink to="/orders" id="link1" className='links'>My Orders </NavLink>
+     <NavLink to="cart" id="link2" className='links'> My Cart {props.value} </NavLink> 
+     </div>
     </div>
-  );
-};
+  )
+}
 
-export default Navbaar;
+export default Navbaar ;
+//navbaar ,homelink,productlink,editlink,link1,link2,links,navhome,navadd,navedit,navlogin,navregister

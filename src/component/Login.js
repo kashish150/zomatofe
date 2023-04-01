@@ -2,35 +2,33 @@ import React from "react";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 const Login = (props) => {
-  //for getting value that what user put we have to use hook!!
-  const [inpval, setinp] = useState({
+const [inpval, setinp] = useState({
     email: "",
     password: "",
   });
 
-  const setData = (e) => {
-    console.log(e.target.value);
-    const { name, value } = e.target;
-    setinp((preval) => {
-      return {
+const setData = (e) => {
+console.log(e.target.value);
+const { name, value } = e.target;
+ setinp((preval) => {
+    
+  return {
         ...preval,
         [name]: value,
       };
     });
   };
-  return (
+
+  return (  
     <>
       <section>
         <div id="imgBox">
           <img src="https://img.freepik.com/premium-vector/chef-man-cooking-restaurant-kitchen-vector-chef-guy-preparing-delicious-dish-character-cooker-wearing-professional-suit-hat-cook-delicacy-meal-food-kitchenware-flat-cartoon-illustration_87720-5448.jpg"></img>
         </div>
         <div className="container">
-          <b>
-            {" "}
-            <h1>
-              {" "}
-              <center> Sign in {props.value} </center>{" "}
-            </h1>{" "}
+          <b> <h1>
+            <center> login {props.value} </center>
+            </h1>
           </b>
           <form>
             <input
@@ -42,9 +40,10 @@ const Login = (props) => {
               name="email"
               required
             />
-            <br />{" "}
+            <br />
             <input
               className="input"
+              id="pass"
               type="password"
               onChange={setData}
               value={inpval.password}
@@ -52,19 +51,18 @@ const Login = (props) => {
               name="password"
               required
             />
-            <br />{" "}
-            <button type="submit" id="btn">
-              {" "}
+            <br /> 
+             <button type="submit" id="btn">
               <NavLink to="/search" id="redirect">
                 Login
               </NavLink>
             </button>
             <p>
-              Don't have an account ?{" "}
-              <a id="Register" href="/signup">
-                Create an account
+              New User ?
+              </p>
+              <a  id="Register" href="/signup">
+                 SignUp
               </a>
-            </p>
           </form>
         </div>
       </section>

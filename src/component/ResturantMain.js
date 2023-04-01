@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import Cards from "./Cards";
 import Fooddata from "./FoodData";
 
-const Search = (props) => {
+const ResturantMain = (props) => {
   const [fdata, setFdata] = useState(Fooddata);
   console.log(props.value + "props.value");
   function handleclick() {
@@ -13,7 +12,7 @@ const Search = (props) => {
   }
   return (
     <>
-      <form className="d-flex justify-content-center align-items-center mt-3">
+      <form className="d-flex justify-content-center align-items-center mt-8">
         <input
           id="search_input"
           type="text"
@@ -28,13 +27,10 @@ const Search = (props) => {
           Search
         </button>
       </form>
-      <section>
-        <div className="row mt-2 d-flex justify-content-around align-items-center">
           <Cards data={fdata} />
-        </div>
-      </section>
+        
     </>
   );
 };
 
-export default Search;
+export default ResturantMain;
