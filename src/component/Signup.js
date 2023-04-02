@@ -29,7 +29,7 @@ const Signup = () => {
           <img src="https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg?w=2000"></img>
         </div>
         <div className="container">
-          <h2> Sign up </h2>
+          <h1> Sign up </h1>
           <form>
             <input
               className="input"
@@ -67,15 +67,14 @@ const Signup = () => {
               name="password"
               required
             />
-            <br />{" "}
-            <button type="submit" id="btn">
-              {" "}
-              <NavLink to="/search" id="redirect">
-                Register{" "}
-              </NavLink>{" "}
-            </button>
+            <br />
+               <button type="submit" id="btn">
+                <NavLink to="/search" id="redirect">
+                Register
+              </NavLink>
+                 </button>
             <p>
-              Already have an account?{" "}
+              Already have an account?
               <a href="/login" id="Register">
                 Log in
               </a>
