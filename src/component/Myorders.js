@@ -24,7 +24,7 @@ const MyOrders = () => {
           {orders.map((order) => {
             return (
               <tr>
-                <td>{order.restaurent}</td>
+                <td>{order._id}</td>
                 <td>{order.status}</td>
                 <td>{order.totalAmount}</td>
               </tr>

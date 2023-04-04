@@ -13,7 +13,6 @@ const Cart = ({ data }) => {
       .then((res) => {
         console.log(res.data);
         setCart(res.data);
-        console.log(cart);
       });
   }, []);
   function handlePlaceOrder() {
@@ -33,14 +32,17 @@ const Cart = ({ data }) => {
           <tr>
             {cart != null ? (
               <tr>
-                <td>{cart._id}</td>
-                <td>{cart.user}</td>
+                <td className="user">{cart._id}</td>
+
+                <td className="user">{cart.user}</td>
                 <td>
                   {cart.cartItems.map((item) => {
                     return (
                       <div>
-                        <div>{item.product}</div>
+                        <div>{item.name}</div>
                         <div>{item.quantity}</div>
+                        <hr></hr>
+                        <br></br>
                       </div>
                     );
                   })}

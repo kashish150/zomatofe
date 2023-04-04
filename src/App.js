@@ -1,7 +1,6 @@
 import "./App.css";
 import React, { useState } from "react";
 import Login from "./component/Login";
-import Counter from "./component/Counter";
 import Signup from "./component/Signup";
 import ResturantMain from "./component/ResturantMain";
 import { Route, Routes } from "react-router-dom";
@@ -14,6 +13,7 @@ import MyOrders from "./component/Myorders";
 function App() {
   const [value, setvalue] = useState(0);
   function setcartvalue(value) {
+    console.log(value);
     setvalue(value);
   }
   return (
@@ -31,11 +31,10 @@ function App() {
           />
           <Route exact path="/cart" element={<Cart />} />
           <Route exact path="/orders" element={<MyOrders />} />
-          <Route exact path="/counter" element={<Counter />} />
           <Route
             exact
             path="/products/:id"
-            element={<RestaurentProducts setvalue={setvalue} />}
+            element={<RestaurentProducts setcartvalue={setcartvalue} />}
           />
         </Routes>
       </header>

@@ -7,21 +7,19 @@ const Cards = ({ data }) => {
       {data.map((element, k) => {
         return (
           <>
-          <div id="grid_container">
-          <Link to={`/products/${element.id}`}>
-          
-            <div className="grid-item">
-              <div className="image">
-                <img src={element.imgdata}></img>
-              </div>
-              <div className="carddata">
-                <h3 id="cardhead">{element.rname}</h3>
-                <span>{element.rating}&nbsp;★</span>
-              </div>
+            <div id="grid_container">
+              <Link to={`/products/${element._id}`}>
+                <div className="grid-item">
+                  <div className="image">
+                    <img src={element.imgdata}></img>
+                  </div>
+                  <div className="carddata">
+                    <h3 id="cardhead">{element.restuarentName}</h3>
+                    <span>{element.email}&nbsp;★</span>
+                  </div>
+                </div>
+              </Link>
             </div>
-            </Link>
-          </div>
-          
           </>
         );
       })}
