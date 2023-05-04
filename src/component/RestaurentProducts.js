@@ -74,9 +74,8 @@ const RestaurentProducts = (props) => {
         {products.length > 0 ? (
           products.map((element) => {
             return (
-              <div>
+          <>
                 <card id="items">
-                  <div></div>
                   <div className="Item_container">
                     <div id="res_name">{element.name}</div>
                     <div id="item_price">₹{element.pricePerQuantity}</div>
@@ -107,11 +106,11 @@ const RestaurentProducts = (props) => {
                     </div>
                   </div>
                 </card>
-              </div>
+          </>
             );
           })
         ) : (
-          <div>No products for this restaurent</div>
+          <div>empty</div>
         )}
       </div>
     </div>

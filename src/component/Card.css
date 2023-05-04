@@ -1,0 +1,18 @@
+
+.image img{
+        width:350px;
+        height:250px;
+        border-radius:8px;
+        margin:8px;
+      }
+      
+#cardhead{margin:2px;
+    margin-right:5px;
+      color:black;
+     }
+        
+#item_page_link{text-decoration:none;}
+
+#rating{color:black;}
+
+.res_cards{display:flex;}

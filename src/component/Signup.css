@@ -1,0 +1,22 @@
+section .imgBox2{  height: 600px;
+    width:50%;
+    display:flex;
+    }
+
+  section .imgBox2 img{
+    display:flex;
+    height:600px;
+    margin-top:0px;
+    width:100%;
+    margin-left:20px;
+    object-fit: cover;
+  }
+  #Login{color:red;
+    text-decoration: none;
+    margin-left:5px;
+    }
+    #ask_old_user{color:black;
+    position:fixed;
+left:660px;}
+
+  

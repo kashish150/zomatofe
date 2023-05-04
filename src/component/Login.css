@@ -1,0 +1,55 @@
+section #imgBox{
+    height: 80vh;
+    width:50%;
+    display:flex;
+  }
+.container{
+    font-family: 'Poppins', sans-serif;
+    height:800vh;
+    width:50%;
+ }
+ h1{margin-top:50px;
+    letter-spacing: .5px;
+    margin-right:350px;
+    margin-left:30px;
+    color:black;
+    font-size:55px;
+    font-family:Poppins;}
+
+.input {border-radius:10px;
+        padding:5px 5px 5px 5px ;
+        margin-top:20px;
+        margin-right:50%;
+        margin-left:10px;
+        height:40px;
+        width:250px;
+        padding:4px;
+        }
+#input2{margin-top:25px;}   
+#btn{background-color:#3498db;
+    cursor:pointer;
+    border-radius:5px;
+    color:white;
+     margin-left:80px;
+    margin-right:60%;
+    margin-top:20px;
+    margin-bottom:5%;
+    padding:8px 8px 8px 8px ;
+    width:100px;
+  } 
+ #ask_new_user{position:fixed;
+left:660px;
+color:black;}
+  
+#redirect{color:white;
+    text-decoration:none;}    
+    
+#Register{color:red;
+    text-decoration: none;
+    position:fixed;
+    left:800px;
+top:330px;}
+
+ #cart_id{color:green;} 
+        
+ 

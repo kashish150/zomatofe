@@ -29,7 +29,7 @@ const Signup = () => {
           <img src="https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg?w=2000"></img>
         </div>
         <div className="container">
-          <h1> Sign up </h1>
+          <h1> <u>  SignUp </u> </h1>
           <form>
             <input
               className="input"
@@ -73,15 +73,17 @@ const Signup = () => {
                 Register
               </NavLink>
                  </button>
-            <p>
-              Already have an account?
-              <a href="/login" id="Register">
-                Log in
-              </a>
-            </p>
           </form>
         </div>
       </section>
+      <div className="data2">
+              <p>
+              Already have an account?
+              <NavLink to="/login" id="Register">
+                Log in
+              </NavLink>
+            </p>
+      </div>
     </>
   );
 };

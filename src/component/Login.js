@@ -26,8 +26,8 @@ const { name, value } = e.target;
           <img src="https://img.freepik.com/premium-vector/chef-man-cooking-restaurant-kitchen-vector-chef-guy-preparing-delicious-dish-character-cooker-wearing-professional-suit-hat-cook-delicacy-meal-food-kitchenware-flat-cartoon-illustration_87720-5448.jpg"></img>
         </div>
         <div className="container">
-          <b> <h1>
-            <center> login {props.value} </center>
+          <b> <h1> <u>
+            <center> Login {props.value} </center> </u>
             </h1>
           </b>
           <form>
@@ -57,16 +57,16 @@ const { name, value } = e.target;
                 Login
               </NavLink>
             </button>
-            <p>
-              New User ?
-              </p>
-              <a  id="Register" href="/signup">
-                 SignUp
-              </a>
-          </form>
+            </form>
         </div>
       </section>
-    </>
+<div className="data">
+                  <p >New user ?
+         <NavLink to="/signup" id="Register"> Signup </NavLink>
+         </p> 
+         </div>
+      
+         </>
   );
 };
 export default Login;

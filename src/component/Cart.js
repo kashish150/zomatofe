@@ -26,42 +26,33 @@ const Cart = ({ data }) => {
   }
   return (
     <>
-      CART
-      <div>
-        <table>
-          <tr>
+    <div id="cart_heading"><center>My CART</center></div>
+      <div className="cart">
             {cart != null ? (
-              <tr>
-                <td className="user">{cart._id}</td>
-
-                <td className="user">{cart.user}</td>
-                <td>
+              <div className="cart">
+                <div className="cart">{cart._id}</div>
+                <div className="cart">{cart.user}</div>
                   {cart.cartItems.map((item) => {
                     return (
-                      <div>
-                        <div>{item.name}</div>
-                        <div>{item.quantity}</div>
-                        <hr></hr>
-                        <br></br>
-                      </div>
+                      <div className="cart">
+                        <div className="cart">{item.name}</div>
+                        <div className="cart">{item.quantity}</div>
+                        </div>
                     );
                   })}
-                </td>
-                <td>{cart._id}</td>
-              </tr>
+                <div className="cart">{cart._id}</div>
+              </div>
             ) : (
               <div>Empty CART</div>
             )}
-          </tr>
-        </table>
-        <button
+          </div>
+        <button id="place_order_btn"
           onClick={() => {
             handlePlaceOrder();
           }}
         >
           PLACE ORDER
         </button>
-      </div>
     </>
   );
 };

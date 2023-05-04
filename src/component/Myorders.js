@@ -18,21 +18,30 @@ const MyOrders = () => {
 
   return (
     <div>
-      <div>MY ORDERS</div>
+   <h1 id="order_heading"> <center> My Order's </center> </h1>
       {orders.length > 0 ? (
-        <table>
+<div> 
           {orders.map((order) => {
             return (
-              <tr>
-                <td>{order._id}</td>
-                <td>{order.status}</td>
-                <td>{order.totalAmount}</td>
-              </tr>
+              <>
+                      <div className="orders">
+                        <div className="Upper_order_data">
+                      <div >📷</div>
+                      <div id="res_name">Burger King{order.name}</div>
+                      <div id="order_status">{order.status}</div>
+                      </div>
+                      <div className="order_lower_data">
+                <div >{order._id}</div>
+                
+                <div id="order_amount">₹{order.totalAmount}</div>
+                </div>
+                </div>
+                </>
             );
           })}
-        </table>
+      </div>  
       ) : (
-        <div> empty </div>
+        <div> No results Found.. </div>
       )}
     </div>
   );
