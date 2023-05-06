@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import Cookies from "js-cookie";
+import { useNavigate, NavLink } from "react-router-dom";
+
 const RestaurentProducts = (props) => {
+  const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const { id } = useParams();
   const [cart, setCart] = useState({});
@@ -10,8 +14,6 @@ const RestaurentProducts = (props) => {
     if (cart.cartItems == undefined) return 0;
     var count = 0;
     console.log(e);
-    // console.log(cart.cartItems[0]);
-
     for (let i = 0; i < cart.cartItems.length; i++) {
       if (e._id == cart.cartItems[i].product) {
         console.log(cart.cartItems[i]);
@@ -23,47 +25,45 @@ const RestaurentProducts = (props) => {
   }
   function handlecart(v, element) {
     var value = Number(v);
-    // console.log(typeof value);
+
     axios
       .post(`http://localhost:3000/api/cart/updateCartBackend`, {
-        user: "641818601ce7aa19c9d1cb19",
         newProduct: {
           product: element._id,
           quantity: value,
+          productPrice: element.pricePerQuantity,
+          productName: element.name,
         },
       })
       .then((res) => {
-        axios
-          .get(
-            `http://localhost:3000/api/cart/cartItems/${"641818601ce7aa19c9d1cb19"}`
-          )
-          .then((resp) => {
-            // console.log("checkerfunction");
-            setCart(resp.data);
-            // console.log(resp.data.cartItems.length);
-            props.setcartvalue(resp.data.cartItems.length);
-            changevalue(!value);
-          });
+        axios.get(`http://localhost:3000/api/cart/cartItems`).then((resp) => {
+          setCart(resp.data);
+          props.setcartvalue(resp.data.cartItems.length);
+          changevalue(!value);
+        });
       });
   }
 
   useEffect(() => {
+    if (Cookies.get("token") === undefined) {
+      navigate("/login");
+    } else {
+      axios.defaults.headers.common["x-auth-token"] = JSON.parse(
+        Cookies.get("token")
+      );
+      console.log("Cookies.get(");
+    }
+
     axios
-      .get(
-        `http://localhost:3000/api/product/getAllProducts/${"64142a494d532e7558195d1c"}`
-      )
+      .get(`http://localhost:3000/api/product/getAllProductsUser/${id}`)
       .then((res) => {
-        // console.log(res.data);
+        console.log(res.data);
         setProducts(res.data);
-        axios
-          .get(
-            `http://localhost:3000/api/cart/cartItems/${"641818601ce7aa19c9d1cb19"}`
-          )
-          .then((resp) => {
-            setCart(resp.data);
-            // console.log(resp.data);
-            props.setcartvalue(resp.data.cartItems.length);
-          });
+        axios.get(`http://localhost:3000/api/cart/cartItems`).then((resp) => {
+          setCart(resp.data);
+          console.log(resp.data);
+          props.setcartvalue(resp.data.cartItems.length);
+        });
       });
   }, [value]);
 
@@ -74,7 +74,7 @@ const RestaurentProducts = (props) => {
         {products.length > 0 ? (
           products.map((element) => {
             return (
-          <>
+              <>
                 <card id="items">
                   <div className="Item_container">
                     <div id="res_name">{element.name}</div>
@@ -106,7 +106,7 @@ const RestaurentProducts = (props) => {
                     </div>
                   </div>
                 </card>
-          </>
+              </>
             );
           })
         ) : (

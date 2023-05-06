@@ -2,14 +2,13 @@ import "./App.css";
 import React, { useState } from "react";
 import Login from "./component/Login";
 import Signup from "./component/Signup";
-import ResturantMain from "./component/ResturantMain";
 import { Route, Routes } from "react-router-dom";
 import Home from "./component/Home";
 import Navbaar from "./component/Navbaar";
 import RestaurentProducts from "./component/RestaurentProducts";
 import Cart from "./component/Cart";
 import MyOrders from "./component/Myorders";
-
+import ResturantMain from "./component/ResturantMain";
 function App() {
   const [value, setvalue] = useState(0);
   function setcartvalue(value) {

@@ -16,11 +16,11 @@ const Navbaar = (props) => {
           SignUp{" "}
         </NavLink>
         <NavLink to="/orders" id="link1" className="links">
-         Orders{" "}
+          Orders{" "}
         </NavLink>
         <NavLink to="cart" id="link2" className="links">
           {" "}
-         Cart {props.value}{" "}
+          Cart {props.value}{" "}
         </NavLink>
       </div>
     </div>

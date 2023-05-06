@@ -13,7 +13,15 @@ box-sizing:border-box;}
   height: 40vmin;
   pointer-events: none;
 }
-
+.productDetails{
+  display: flex;
+}
+.productDetails div {
+  margin:20px;
+}
+.table,td{
+  border:1px solid black;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
