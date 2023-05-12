@@ -51,43 +51,45 @@ const Cart = ({ data }) => {
   }
   return (
     <>
-      <div id="cart_heading">
-        <center>My CART</center>
-      </div>
-      <div className="cart">
+    <div className="cart_body">
+      <div >
         {cart != null ? (
           <div>
-            <table className="cart flex table">
-              <tr>
-                <th>Product Name :</th>
-                <th>Product Quantity</th>
-                <th>Product Price</th>
-                <th>Total Product Price</th>
-              </tr>
+                  <div id="cart_heading">
+                  Shopping Cart
+                    </div>
+                    <p id="price">Price</p>
+                    <hr/>
+            <div>
               {cart.cartItems.map((item) => {
                 return (
-                  <tr>
-                    <td>{item.productName}</td>
-                    <td className="flex">
-                      <button id="dec" disabled={0}>
+                  <div className="cart_inner">
+                    <div id="productimage">{item.image}
+                    <img src="https://cdn-icons-png.flaticon.com/512/1160/1160358.png" width="200px" height="200px"></img>
+                    </div> 
+                    <div id="Product_name">{item.productName}</div>
+                    <div className="Counter">
+                      <button id="decrement" disabled={0}>
                         -
                       </button>{" "}
                       {item.quantity}
-                      <button id="inc">+</button>
-                    </td>
-                    <td>{item.productPrice}</td>{" "}
-                    <td> {item.quantity * item.productPrice}</td>
-                  </tr>
+                      <button id="increment">+</button>
+                    </div>
+                    <div id="cart_product_price">{item.productPrice}</div>{" "}
+                    <div id="Total_price"> {item.quantity * item.productPrice}</div>
+                    <hr/>
+                  </div>
                 );
               })}
-            </table>
-            <div>Total Amount = {"500"}</div>
+            </div>
+            <div className="cart_inner">Total Amount = {"500"}</div>
           </div>
         ) : (
           <div>Empty CART</div>
         )}
       </div>
-      <button
+      <div className="cart_inner">
+              <button
         id="place_order_btn"
         onClick={() => {
           handlePlaceOrder();
@@ -95,6 +97,9 @@ const Cart = ({ data }) => {
       >
         PLACE ORDER
       </button>
+      </div>
+
+      </div>
     </>
   );
 };
