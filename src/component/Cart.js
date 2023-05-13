@@ -52,22 +52,16 @@ const Cart = (props) => {
         <div>
           {cart != null ? (
             <div>
-              <div id="cart_heading">Shopping Cart</div>
-              <p id="price">Price</p>
-              <hr />
+              <h2 id="cart_heading">Cart</h2>
               <div>
+                <div className="cartimage">
+                  <img src="https://img.freepik.com/premium-vector/online-grocery-shopping-concept-isometric-shopping-cart-with-fresh-food-drink-order-food-grocery-online-from-app-by-smart-phone-vector-illustration-flat-style_165488-1403.jpg"></img>
+                </div>
                 {cart.cartItems.map((item) => {
                   return (
-                    <div className="cart_inner">
-                      <div id="productimage">
-                        {item.image}
-                        <img
-                          src="https://cdn-icons-png.flaticon.com/512/1160/1160358.png"
-                          width="200px"
-                          height="200px"
-                        ></img>
-                      </div>
+                    <div className="cart_details" >
                       <div id="Product_name">{item.productName}</div>
+                      <div id="cart_product_price">{item.productPrice}</div>{" "}
                       <div className="Counter">
                         <button
                           id="decrement"
@@ -88,23 +82,22 @@ const Cart = (props) => {
                           +
                         </button>
                       </div>
-                      <div id="cart_product_price">{item.productPrice}</div>{" "}
                       <div id="Total_price">
                         {" "}
                         {item.quantity * item.productPrice}
                       </div>
-                      <hr />
                     </div>
                   );
                 })}
               </div>
-              <div className="cart_inner">Total Amount = {"500"}</div>
+              <div className="note">Total Amount Payble = {"500"}</div>
             </div>
           ) : (
             <div>Empty CART</div>
           )}
         </div>
-        <div className="cart_inner">
+        <hr></hr>
+        <div>
           <button
             id="place_order_btn"
             onClick={() => {

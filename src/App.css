@@ -458,13 +458,17 @@ font-weight: 600;
   padding:5px;
 }
 .cartimage img{ display:flex;
-  height:60vh;
-  margin-top:5pxpx;
+  height:80vh;
+  border-radius: 5px;
+ top:60px;
   width:450px;
  left:10px;
+
   position:fixed;
 
   }
+  .cart_details{display:flex;
+  margin:15px;}
 .productimage{margin-left: 10px;
 display:flex;
 height:80vh;
@@ -479,4 +483,3 @@ font-weight: 600;
 margin-top:30px;
 margin-left:50px;
 }
-
