@@ -13,14 +13,12 @@ const RestaurentProducts = (props) => {
   function countOfProducts(e) {
     if (cart.cartItems == undefined) return 0;
     var count = 0;
-    console.log(e);
     for (let i = 0; i < cart.cartItems.length; i++) {
       if (e._id == cart.cartItems[i].product) {
         console.log(cart.cartItems[i]);
         count = cart.cartItems[i].quantity;
       }
     }
-
     return count;
   }
   function handlecart(v, element) {
@@ -36,8 +34,10 @@ const RestaurentProducts = (props) => {
         },
       })
       .then((res) => {
+        console.log(res);
         axios.get(`http://localhost:3000/api/cart/cartItems`).then((resp) => {
           setCart(resp.data);
+          console.log(resp.data);
           props.setcartvalue(resp.data.cartItems.length);
           changevalue(!value);
         });
@@ -62,7 +62,7 @@ const RestaurentProducts = (props) => {
         axios.get(`http://localhost:3000/api/cart/cartItems`).then((resp) => {
           setCart(resp.data);
           console.log(resp.data);
-          props.setcartvalue(resp.data.cartItems.length);
+          // props.setcartvalue(resp.data.cartItems.length);
         });
       });
   }, [value]);
