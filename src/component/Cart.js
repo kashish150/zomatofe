@@ -55,40 +55,38 @@ const Cart = ({ data }) => {
       <div >
         {cart != null ? (
           <div>
-                  <div id="cart_heading">
-                  Shopping Cart
-                    </div>
-                    <p id="price">Price</p>
-                    <hr/>
+                  <h1 id="cart_heading">
+                  Cart
+                    </h1>
             <div>
+                  <div className="cartimage">
+                    <img src="https://img.freepik.com/free-vector/order-paying-contactless-payment-by-credit-card-order-basket-laptop-bank-card-male-online-customer-with-tablet-cartoon-character_335657-2563.jpg?w=740&t=st=1683899021~exp=1683899621~hmac=23e7929634870624117a51d6ea6376b41be45edb79ae4217fd82f72c79e1c96b"></img>
+                    </div>
               {cart.cartItems.map((item) => {
                 return (
-                  <div className="cart_inner">
-                    <div id="productimage">{item.image}
-                    <img src="https://cdn-icons-png.flaticon.com/512/1160/1160358.png" width="200px" height="200px"></img>
-                    </div> 
-                    <div id="Product_name">{item.productName}</div>
+                  <div className="content_in_cart">
+                    <div className="cart_start_data">
+                    <div  id="Product_name">{item.productName}</div>
+                    <div  id="cart_product_price">{item.productPrice}</div>{" "}
                     <div className="Counter">
-                      <button id="decrement" disabled={0}>
-                        -
-                      </button>{" "}
+                      <button id="decrement" disabled={0}>-</button>{" "}
                       {item.quantity}
                       <button id="increment">+</button>
                     </div>
-                    <div id="cart_product_price">{item.productPrice}</div>{" "}
-                    <div id="Total_price"> {item.quantity * item.productPrice}</div>
-                    <hr/>
-                  </div>
+                    <div  id="Total_price"> {item.quantity * item.productPrice}</div>
+                    </div>
+                    </div>
                 );
               })}
+
             </div>
-            <div className="cart_inner">Total Amount = {"500"}</div>
+            <div className="note">Total Amount Payable = {"500"}</div>
           </div>
         ) : (
           <div>Empty CART</div>
         )}
       </div>
-      <div className="cart_inner">
+      <div >
               <button
         id="place_order_btn"
         onClick={() => {
