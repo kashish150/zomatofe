@@ -28,7 +28,11 @@ function App() {
             path="/search"
             element={<ResturantMain value={value} setvalue={setvalue} />}
           />
-          <Route exact path="/cart" element={<Cart />} />
+          <Route
+            exact
+            path="/cart"
+            element={<Cart setcartvalue={setcartvalue} />}
+          />
           <Route exact path="/orders" element={<MyOrders />} />
           <Route
             exact

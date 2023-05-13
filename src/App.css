@@ -394,3 +394,59 @@ cursor:pointer;
 .lower_body{display: flex;
 text-align: center;
 justify-content: center;}
+
+.cart_body{background-color:#dfe6e9;
+  width:100%;
+  height:100%;
+  }
+  #price{
+    color:black;
+    position:absolute;
+    right: 20px;
+    top:100px;
+    
+  }
+  
+  #decrement{
+    border:none;
+    color:black;
+  font-size:20px;
+  cursor:pointer;}
+  #increment{
+  color:black;
+  border:none;
+  margin:3px;
+  font-size:20px;
+  cursor:pointer;}
+  #cart_product_price{
+  
+    color:black;
+    position:absolute;
+  }
+  .Counter{border:1px solid black;
+    border-radius:3px;
+  background-color:#f5f6fa;
+  margin-left:25%;
+  width: 100px;}
+  #Product_name{
+    color:black;
+    font-family: sans-serif;
+    position:absolute;
+    font-size: 30px;
+    font-weight: 300;
+  }
+  #Total_price{margin-right:0%;
+  color:black;
+  font-weight: 600;
+  display:absolute;
+  position:left;}
+  .cart_headings{
+    color:black;
+    margin: 5px;
+    padding:5px;
+  }
+  #productimage{margin-left: 10px;
+  display:flex;
+  align-items: left;}
+  .cart_inner{background-color: white;
+  }
