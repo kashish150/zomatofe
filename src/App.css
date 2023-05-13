@@ -374,18 +374,24 @@ text-decoration: none;}
   align-items:center;
 margin:10px 0px 0px 10px;}
 #order_amount{margin-left:300px;}
-#place_order_btn{background-color:red;
+#place_order_btn{background-color:#d63031;
 color:white;
 border-radius:5px;
 border:none;
-padding:10px;
-margin:10px;
+padding:13px;
+margin:15px;
 cursor:pointer;
 }
-#cart_heading{font-family:poppins;
+#cart_heading{font-family:Lobster;
   margin-top:50px;
+  display:flex;
+justify-content: center;
+text-decoration: underline;
+  margin-bottom: 15px;
   color:black;
-  font-size:40px;
+  font-weight: 400;
+  font-size:70px;
+  
 }
 #cart_user{color:yellow;}
 #item_name{color:red;}
@@ -394,59 +400,83 @@ cursor:pointer;
 .lower_body{display: flex;
 text-align: center;
 justify-content: center;}
+.Table_head{margin:10px;}
+#price{
+  color:black;
+  position:absolute;
+  right: 20px;
+  top:100px;
+  
+}
+.Body{display:flex;
+}
+#decrement{
+  color:black;
+font-size:20px;
+margin-left:1px;
+border: none;
+background-color: white;
+cursor:pointer;}
+#increment{
+color:black;
+border: none;
+background-color: white;
+margin:1px;
+font-size:20px;
+cursor:pointer;}
+#cart_product_price{
+position:fixed;
+right:35%;
+  color:black;
 
-.cart_body{background-color:#dfe6e9;
-  width:100%;
-  height:100%;
-  }
-  #price{
-    color:black;
-    position:absolute;
-    right: 20px;
-    top:100px;
-    
-  }
-  
-  #decrement{
-    border:none;
-    color:black;
-  font-size:20px;
-  cursor:pointer;}
-  #increment{
-  color:black;
-  border:none;
-  margin:3px;
-  font-size:20px;
-  cursor:pointer;}
-  #cart_product_price{
-  
-    color:black;
-    position:absolute;
-  }
-  .Counter{border:1px solid black;
-    border-radius:3px;
-  background-color:#f5f6fa;
-  margin-left:25%;
-  width: 100px;}
-  #Product_name{
-    color:black;
-    font-family: sans-serif;
-    position:absolute;
-    font-size: 30px;
-    font-weight: 300;
-  }
-  #Total_price{margin-right:0%;
-  color:black;
-  font-weight: 600;
-  display:absolute;
-  position:left;}
-  .cart_headings{
-    color:black;
-    margin: 5px;
-    padding:5px;
-  }
-  #productimage{margin-left: 10px;
+}
+.Counter{border:1px solid black;
+  text-align: center;
+  border-radius:5px;
+  position:fixed;
+  right:25%;
+  width: 100px;
+height:30px;}
+#Product_name{
   display:flex;
-  align-items: left;}
-  .cart_inner{background-color: white;
+  font-family: monospace;
+  margin-left:0%;
+  color:black;
+  font-size: 30px;
+  font-weight: 200;
+}
+.cart_start_data{display:flex;
+justify-content: center;}
+#Total_price{position:fixed;
+  right:20%;
+color:black;
+font-weight: 600;
+}
+.cart_headings{
+  color:black;
+  margin: 5px;
+  padding:5px;
+}
+.cartimage img{ display:flex;
+  height:60vh;
+  margin-top:5pxpx;
+  width:450px;
+ left:10px;
+  position:fixed;
+
   }
+.productimage{margin-left: 10px;
+display:flex;
+height:80vh;
+width:400px;
+}
+.cart_upper_content{display:flex;
+justify-content: center;}
+.cart_lower_content{display:flex;
+  justify-content: center;}
+.note{color:black;
+font-weight: 600;
+margin-top:30px;
+margin-left:50px;
+}
+

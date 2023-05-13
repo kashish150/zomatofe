@@ -18,7 +18,7 @@ const Navbaar = (props) => {
         <NavLink to="/orders" id="link1" className="links">
           Orders{" "}
         </NavLink>
-        <NavLink to="cart" id="link2" className="links">
+        <NavLink to="/cart" id="link2" className="links">
           {" "}
           Cart {props.value}{" "}
         </NavLink>
