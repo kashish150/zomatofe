@@ -15,8 +15,7 @@ const ResturantMain = (props) => {
 
   return (
     <>
-      <div>RESTAURENT</div>
-      <Cards data={fdata} />
+      <Cards id="cards" data={fdata} />
     </>
   );
 };

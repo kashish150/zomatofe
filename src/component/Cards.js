@@ -3,26 +3,27 @@ import { Link } from "react-router-dom";
 const Cards = ({ data }) => {
   const [cartcount, setcartcount] = useState(0);
   return (
-    <>
+
+<>
+
+<h5 id="res_title"> Restaurents near you</h5>
+<div className="res_container">
       {data.map((element, k) => {
-        return (
+      return (
           <>
-            <div id="grid_container">
-              <Link to={`/products/${element._id}`}>
-                <div className="grid-item">
-                  <div className="image">
+              <Link id="resto_link" to={`/products/${element._id}`}>
+                  <div id="res_img" className="res_grid image">
                     <img src={element.imgdata}></img>
                   </div>
-                  <div className="carddata">
-                    <h3 id="cardhead">{element.restuarentName}</h3>
-                    <span>{element.email}&nbsp;★</span>
+                  <div className="resgrid">
+                    <h3 id="reshead">{element.restuarentName}</h3>
+                    <span id="res_span">{element.email}&nbsp;★</span>
                   </div>
-                </div>
               </Link>
-            </div>
           </>
         );
       })}
+       </div>
     </>
   );
 };

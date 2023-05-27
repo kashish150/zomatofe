@@ -69,17 +69,17 @@ const RestaurentProducts = (props) => {
 
   return (
     <div>
-      <div className="item_cards">
-        <h1>PRODUCTS</h1>
+           <h1 id="res_product">PRODUCTS</h1>
+      <div className="Restorent_items">
         {products.length > 0 ? (
           products.map((element) => {
             return (
               <>
-                <card id="items">
-                  <div className="Item_container">
-                    <div id="res_name">{element.name}</div>
-                    <div id="item_price">₹{element.pricePerQuantity}</div>
-                    <div id="res_id">{element._id}</div>
+                <card>
+                  <div>
+                    <div id="dish_name">{element.name}</div>
+                    <div>₹{element.pricePerQuantity}</div>
+                    <div>{element._id}</div>
                     <div className="countbody">
                       <div className="decrement">
                         <button
@@ -110,7 +110,9 @@ const RestaurentProducts = (props) => {
             );
           })
         ) : (
-          <div>empty</div>
+          <div>
+            <p>No Products added!!</p>
+         </div>
         )}
       </div>
     </div>
